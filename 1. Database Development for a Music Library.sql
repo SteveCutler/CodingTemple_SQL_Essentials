@@ -38,7 +38,7 @@ CREATE TABLE Artists(
 --     for the total duration of the album.
 
 ALTER TABLE Albums 
-ADD total_dur_min INT NOT NULL
+ADD total_dur_min INT NOT NULL;
 
 -- Task 3: SQL Foreign Key Establishment
 
@@ -49,4 +49,4 @@ ADD total_dur_min INT NOT NULL
 --     referential integrity between the tables.
 
 ALTER TABLE Albums ADD CONSTRAINT fk_artist_ID FOREIGN KEY (artist_ID) REFERENCES Artists(artist_ID);
-ALTER TABLE Albums ADD CONSTRAINT fk_genre_ID FOREIGN KEY (genre_ID) REFERENCES Genres(genre_ID);
+ALTER TABLE Albums ADD CONSTRAINT fk_genre_ID FOREIGN KEY (genre_ID) REFERENCES Genre(genre_ID);

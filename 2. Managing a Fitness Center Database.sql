@@ -5,6 +5,12 @@
 
 -- Members Table Structure:
 
+CREATE TABLE Trainers (
+    id INT PRIMARY KEY,
+    trainer_first_name VARCHAR(50) NOT NULL,
+    trainer_last_name VARCHAR(50) NOT NULL
+);
+
 -- had to add members table for code to run properly
 CREATE TABLE Members (
     id INT PRIMARY KEY,
@@ -25,11 +31,7 @@ CREATE TABLE WorkoutSessions (
     FOREIGN KEY (member_id) REFERENCES Members(id)
 );
 
-CREATE TABLE Trainers (
-    id INT PRIMARY KEY,
-    trainer_first_name VARCHAR(50) NOT NULL,
-    trainer_last_name VARCHAR(50) NOT NULL,
-);
+
 -- Task 1: SQL Data Insertion
 
 --     Problem Statement: Your task is to populate the Members and WorkoutSessions tables with relevant data. 
